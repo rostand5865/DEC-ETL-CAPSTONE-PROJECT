@@ -1,50 +1,45 @@
-INAL CAPSTONE PROJECT OF THE DATA ENGINEERING BOOTCAMP
+FINAL CAPSTONE PROJECT OF THE DATA ENGINEERING BOOTCAMP
 ======================================================
 
-Motor Vehicle Collisions - Crashes of the city of New York
-which is a real time dataset updated daily, and which was
+Motor Vehicle Collisions - Crashes in the City of New York
+which is a real-time dataset updated daily, and which was
 made available to the public since 5/7/2014.
-Tha is provided by the Police department of New York (NYPD)
+That is provided by the Police Department of New York (NYPD)
 ======= SOME OF USE CASES TO ANSWER WITH THIS DATASET=====
 A- the city authorities and NYPD should start implementing changes in at least these extremely risky areas in NYC.
-B- Additionally, there should be better reporting of the cause of accident so measures can be taken accordingly
-C- A process should be set up to obtain a detailed report on the cause of accident from insurance companies
+B- Additionally, there should be better reporting of the cause of accidents so measures can be taken accordingly
+C- A process should be set up to obtain a detailed report on the cause of the accident from insurance companies
 D - Finally, decisions that helped bring the counts of collisions down in 2019 should be further pursued.
 
----
-
-The Boroughs by Year
-First, I wanted to see how the 5 boroughs of NYC differed in number of collisions. So, I plotted the total number of collisions in each borough for different timeframes. Looking at the yearly trends, I observed that Brooklyn has the highest number of crashes consistently, followed by Queens, Manhattan, Bronx, and Staten Island, respectively.
-
-In 2019, the number of accidents dropped compared to previous year in all 5 boroughs, with Bronx reporting the smallest decline of 4.3% and Staten Island reporting a whopping drop of 42.0%. This could partly be attributed to reduction in speed limit on NYC streets, which was implemented in 2018. In 2020, all the boroughs reported a steep decline
+--
 
 ---
 
 Data analysis by borough
 
-1- Number of colisions by years for each borough(borough by year)
-2- Number of colisions by month for each borough (borough by month)
-3- Number of colisions by day of the week for each borough (daily)
-4- Number of colisions in half of hours interval for each borough
-5- percentage of people killed by year and borough
-6- percentage of people injured by year and borough
-7- percentage of accidents by causal factors in Manhattan
+1- Number of collisions by years for each borough(borough by year)
+2- Number of collisions by month for each borough (borough by month)
+3- Number of collisions by day of the week for each borough (daily)
+4- Number of collisions in half of the hour intervals for each borough
+5- the percentage of people killed by year and borough
+6- the percentage of people injured by year and borough
+7- the percentage of accidents by causal factors in Manhattan
 
 ---
 
 1- What are the top five most frequent contributing factors for
 accidents in NYC?
 2- What percentage of accidents had alcohol as a contributing factor?
-3- What time of day sees the most cyclist injures or deaths caused by a motor vehicle collision?
+3- What time of day sees the most cyclist injuries or deaths caused by a motor vehicle collision?
 4- Which zip code had the largest number of nonfatal and fatal
 accidents?
 5- Which vehicle make, model, and year was involved in the most
 accidents?
-6- How do the number of collisions in an area of NYC correlate to the number of trees in the area?
+6- How does the number of collisions in an area of NYC correlate to the number of trees in the area?
 7-
 ==
 
-PROJECT : BUILD A DATA PIPELINE TO INGEST THE NEW YORK POLICE DEPARTEMENT (NPDY) MOTOR VEHICLE COLISIONS AND CRASHES data.
+PROJECT: BUILD A DATA PIPELINE TO INGEST THE NEW YORK POLICE DEPARTEMENT (NPDY) MOTOR VEHICLE COLISIONS AND CRASHES data.
 the data is updated daily
 =========================
 
@@ -62,15 +57,15 @@ C- Branch_3 Name :
 ==================
 
 ETL = EXTRACT - TRANSFORM - LOAD
-EXTRACT Data from the NYPD Motor vehicles colision dataset API
+EXTRACT Data from the NYPD Motor vehicles collision dataset API
 TRANSFORM the data obtained from the NYPD dataset
 LOAD the transformed data to a data warehouse
 
 ---
 
 ELT = EXTRACT - LOAD - TRANSFORM
-EXTRACT Data from the NYPD Motor vehicles colision dataset through it's API
-LOAD it into the Data warehouse where it will be transform
+EXTRACT Data from the NYPD Motor Vehicles collision dataset through its API
+LOAD it into the Data warehouse where it will be transformed
 
 =======================================================
 1- Setting up the virtual environment ==>> Done
