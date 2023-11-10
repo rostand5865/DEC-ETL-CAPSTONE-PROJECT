@@ -93,3 +93,5 @@ C- Transform the data.
 D- Process the data.
 E- Monitor jobs.
 ================
+
+![](2023-11-09-23-33-55.png)
