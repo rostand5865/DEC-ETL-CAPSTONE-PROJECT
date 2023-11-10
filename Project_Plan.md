@@ -1,22 +1,27 @@
-<h1>FINAL CAPSTONE PROJECT OF THE DATA ENGINEERING BOOTCAMP</h1>
+# FINAL CAPSTONE PROJECT OF THE DATA ENGINEERING BOOTCAMP
 
 
-<h4>PROJECT: BUILD A DATA PIPELINE TO INGEST THE NEW YORK POLICE DEPARTEMENT (NPDY) MOTOR VEHICLE COLISIONS AND CRASHES data ,the data is updated daily</h4>
+## PROJECT: BUILD A DATA PIPELINE TO INGEST THE NEW YORK POLICE DEPARTEMENT (NPDY) MOTOR VEHICLE COLISIONS AND CRASHES DATA THAT IS UPDATED EVERY MINUTE</h2>
 
-1. Objective of the project (What would you like people to do with the data you have produced?)
-2. Consumers of your data (What users would find your dataset useful?)
-3. Selected Dataset (What datasets are you sourcing from?)
-4. Solution architecture (How does data flow from source to serving?)
-5. Breakdown of tasks (How is your project broken down? Who is doing what?)
+[1. Objective of the project (What would you like people to do with the data you have produced?)](#objective-of-the-project-what-would-you-like-people-to-do-with-the-data-you-have-produced) 
 
+[2. Consumers of your data (What users would find your dataset useful?)](#2-consumers-of-your-data-what-users-would-find-your-dataset-useful--nypd-news)
 
-<h4> 1. Objective of the project (What would you like people to do with the data you have produced?) </h4>
+[3. Selected Dataset (What datasets are you sourcing from?)](#3-selected-dataset-what-datasets-are-you-sourcing-from)
+
+[4. Solution architecture (How does data flow from source to serving?)](#4-solution-architecture-how-does-data-flow-from-source-to-serving)
+
+[5. Breakdown of tasks (How is your project broken down? Who is doing what?)](#5-breakdown-of-tasks-how-is-your-project-broken-down-who-is-doing-what)
+
+----------------------------------------------------------------------------------------
+
+## 1. Objective of the project (What would you like people to do with the data you have produced?) 
 
 
 Motor Vehicle Collisions - Crashes in the City of New York which is a real-time dataset updated daily, and which was made available to the public since 5/7/2014. That is provided by the Police Department of New York (NYPD). Our Goal is to have a live Dashboard which will have some of the questions listed below and summary of crashes on the dashboard updated every minute.
 
 
-<h4>2. Consumers of your data (What users would find your dataset useful?) : NYPD, News </h4>
+## 2. Consumers of your data (What users would find your dataset useful?) : NYPD, News 
 
 SOME OF USE CASES TO ANSWER WITH THIS DATASET:
 
@@ -44,7 +49,7 @@ accidents?
 accidents?
 13. How does the number of collisions in an area of NYC correlate to the number of trees in the area?
 
-<h4>3. Selected Dataset (What datasets are you sourcing from?)</h4>
+## 3. Selected Dataset (What datasets are you sourcing from?)
 
 NYC Open Data - Motor Vehicle Collisions - Crashs
 NYC Open Data - Motor Vehicle Collisions - People
@@ -57,13 +62,13 @@ The Motor Vehicle Collisions crash table contains details on the crash event. Ea
 https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95
 
 
-<h4>4. Solution architecture (How does data flow from source to serving?) </h4>
+## 4. Solution architecture (How does data flow from source to serving?) 
 
 ![](2023-11-09-23-38-28.png)
 
 We will extract Collision data from three different dataset endpoints using a kafka producer which will publish to two consumers. First consumer will load data to snowflake using airbyte. There we will do dimensional modeling to answer questions regarding different dimensions of collisons data. Second consumer will also get the same data, but load into postgres only the data that we will need to have a live dashboard. For visualizing the streaming data we will be using clickhouse.
 
-<h4>5. Breakdown of tasks (How is your project broken down? Who is doing what?)</h4>
+## 5. Breakdown of tasks (How is your project broken down? Who is doing what?)
 
 We have Broken down task as follows:
 
