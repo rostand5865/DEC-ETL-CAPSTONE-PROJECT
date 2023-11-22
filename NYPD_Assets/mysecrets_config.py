@@ -1,4 +1,0 @@
-api_key="83kc00ki1su5naukp89t3xzko"
-api_secret="1ib6lk79kr4h9ln6103z7jpzbhnuausihr2qiylrlnaakof3hk"
-aws_key="AKIA5HPD3GWX4SJXDIOQ"
-aws_secret="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"
