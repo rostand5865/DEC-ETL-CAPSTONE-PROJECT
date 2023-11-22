@@ -1,0 +1,12 @@
+version: 2
+
+sources:
+  - name: default  
+    schema: default  
+    tables:
+      - name: collisions_crashes
+      - name: collisions_person
+      - name: collision_vehicle
+      - name: crashes
+
+ 
