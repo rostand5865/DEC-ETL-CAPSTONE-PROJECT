@@ -1,0 +1,105 @@
+                  crash_date crash_time                cross_street_name  \
+0    2023-11-14T00:00:00.000      10:30       236       RIVERDALE AVENUE   
+1    2023-11-14T00:00:00.000       9:20                              NaN   
+2    2023-11-14T00:00:00.000      17:15                              NaN   
+3    2023-11-14T00:00:00.000      10:23                              NaN   
+4    2023-11-14T00:00:00.000       3:35  172-46    GRAND CENTRAL PARKWAY   
+..                       ...        ...                              ...   
+196  2023-11-14T00:00:00.000      14:55                              NaN   
+197  2023-11-14T00:00:00.000      14:12                              NaN   
+198  2023-11-14T00:00:00.000       9:00                              NaN   
+199  2023-11-14T00:00:00.000      15:50           1633      UNION STREET   
+200  2023-11-14T00:00:00.000      16:00           336       ELDERTS LANE   
+
+    number_of_persons_injured number_of_persons_killed  \
+0                           1                        0   
+1                           0                        0   
+2                           2                        0   
+3                           1                        0   
+4                           0                        0   
+..                        ...                      ...   
+196                         1                        0   
+197                         0                        0   
+198                         0                        0   
+199                         0                        0   
+200                         0                        0   
+
+    number_of_pedestrians_injured number_of_pedestrians_killed  \
+0                               0                            0   
+1                               0                            0   
+2                               0                            0   
+3                               0                            0   
+4                               0                            0   
+..                            ...                          ...   
+196                             1                            0   
+197                             0                            0   
+198                             0                            0   
+199                             0                            0   
+200                             0                            0   
+
+    number_of_cyclist_injured number_of_cyclist_killed  \
+0                           0                        0   
+1                           0                        0   
+2                           2                        0   
+3                           0                        0   
+4                           0                        0   
+..                        ...                      ...   
+196                         0                        0   
+197                         0                        0   
+198                         0                        0   
+199                         0                        0   
+200                         0                        0   
+
+    number_of_motorist_injured  ... location.latitude location.longitude  \
+0                            1  ...               NaN                NaN   
+1                            0  ...         40.582874          -73.98053   
+2                            0  ...         40.871407          -73.86522   
+3                            0  ...         40.660656         -73.885796   
+4                            0  ...         40.718746          -73.79248   
+..                         ...  ...               ...                ...   
+196                          0  ...         40.814266         -73.912964   
+197                          0  ...         40.837864           -73.9114   
+198                          0  ...          40.74743         -73.925476   
+199                          0  ...           40.6681          -73.93606   
+200                          0  ...         40.682575          -73.86619   
+
+                                location.human_address   borough zip_code  \
+0                                                  NaN       NaN      NaN   
+1    {"address": "", "city": "", "state": "", "zip"...       NaN      NaN   
+2    {"address": "", "city": "", "state": "", "zip"...     BRONX    10467   
+3    {"address": "", "city": "", "state": "", "zip"...  BROOKLYN    11207   
+4    {"address": "", "city": "", "state": "", "zip"...    QUEENS    11432   
+..                                                 ...       ...      ...   
+196  {"address": "", "city": "", "state": "", "zip"...     BRONX    10455   
+197  {"address": "", "city": "", "state": "", "zip"...       NaN      NaN   
+198  {"address": "", "city": "", "state": "", "zip"...    QUEENS    11104   
+199  {"address": "", "city": "", "state": "", "zip"...  BROOKLYN    11213   
+200  {"address": "", "city": "", "state": "", "zip"...  BROOKLYN    11208   
+
+       off_street_name contributing_factor_vehicle_3 vehicle_type_code_3  \
+0                  NaN                           NaN                 NaN   
+1                  NaN                           NaN                 NaN   
+2       HOLLAND AVENUE                           NaN                 NaN   
+3    VAN SICLEN AVENUE                           NaN                 NaN   
+4                  NaN                           NaN                 NaN   
+..                 ...                           ...                 ...   
+196    EAST 149 STREET                           NaN                 NaN   
+197                NaN                           NaN                 NaN   
+198    SKILLMAN AVENUE                           NaN                 NaN   
+199                NaN                           NaN                 NaN   
+200                NaN                           NaN                 NaN   
+
+    contributing_factor_vehicle_4 vehicle_type_code_4  
+0                             NaN                 NaN  
+1                             NaN                 NaN  
+2                             NaN                 NaN  
+3                             NaN                 NaN  
+4                             NaN                 NaN  
+..                            ...                 ...  
+196                           NaN                 NaN  
+197                           NaN                 NaN  
+198                           NaN                 NaN  
+199                           NaN                 NaN  
+200                           NaN                 NaN  
+
+[201 rows x 29 columns]

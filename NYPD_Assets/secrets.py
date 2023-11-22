@@ -1,2 +1,0 @@
-api_key="UU7FZSG3U4R7DKXI"
-api_secret="4FJlEwlPnwR11kqOrm+DJEGU2NCmv45JH3BVnA1GFb/FarkWv1nyh/3a70Ygc9G/"
