@@ -64,9 +64,17 @@ https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9g
 
 ## 4. Solution architecture (How does data flow from source to serving?) 
 
-![](2023-11-09-23-38-28.png)
+![](2023-11-22-01-04-28.png)
 
-We will extract Collision data from three different dataset endpoints using a kafka producer which will publish to two consumers. First consumer will load data to snowflake using airbyte. There we will do dimensional modeling to answer questions regarding different dimensions of collisons data. Second consumer will also get the same data, but load into postgres only the data that we will need to have a live dashboard. For visualizing the streaming data we will be using clickhouse.
+We extracted Collision data from three different dataset endpoints using python etl and loaded it to S3 bucket.We extracted 5 million records from api using the python script [DownloadDataFromAPI](NYPD_Assets\initialLoad\DownloadDataFromAPI.py), [DownloadDataFromAPIPeople.py](NYPD_Assets\initialLoad\DownloadDataFromAPIPeople.py) and [DownloadDataFromAPIVehicles.py](NYPD_Assets\initialLoad\DownloadDataFromAPIVehicles.py). And for realtime data, we used python Faker library to replicate orignal data and created a kafka producer which will publish three consumers using [confluent_producer_realtime.py](NYPD_Assets\incrementalLoad\confluent_producer_realtime.py).Each consumer will load data to Clickhouse 3 tables :- collision_crashes, collision_person,collision_vehicle as shown in pictures below. 
+
+![](2023-11-22-01-15-10.png)
+![](2023-11-22-01-16-35.png)
+![](2023-11-22-01-16-07.png)
+
+There we will do dimensional modeling to answer questions regarding different dimensions of collisons data using dbt. We will perform join in clickhouse to have multidimensional queries. For visualizing the streaming data we will be using preset which updated as data streams in, thus creating a live dataset and live dashboard.
+
+![](2023-11-22-01-18-06.png)
 
 ## 5. Breakdown of tasks (How is your project broken down? Who is doing what?)
 
